@@ -17,33 +17,27 @@ export const Flex = styled.div`
 `;
 
 export const H2 = styled.h2`
-  width: 100%;
-  margin-bottom: 10px;
-  text-align: center;
   font-size: 1.5rem;
   line-height: 1.55;
   letter-spacing: 2px;
   font-family: 'PantReg', Helvetica, sans-serif;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 
   &:before,
   &:after {
-    background-color: #e9e9e9;
     content: '';
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
+    flex: 1 1;
+    border-bottom: 1px solid #e9e9e9;
+    margin: auto;
   }
 
   &:before {
-    right: 0.5em;
-    margin-left: -50%;
+    margin-right: 10px;
   }
 
   &:after {
-    left: 0.5em;
-    margin-right: -50%;
+    margin-left: 10px;
   }
 `;
