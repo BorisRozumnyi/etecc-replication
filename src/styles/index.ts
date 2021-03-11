@@ -2,8 +2,19 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 type TagProps = {
   mt?: number;
+  p?: string;
+  border?: string;
   bold?: boolean;
+  bg?: string;
 };
+
+export const BaseTag = styled.div`
+  ${({ mt }: TagProps) => mt && `margin-top: ${mt}px`};
+  ${({ p }: TagProps) => p && `padding: ${p}`};
+  ${({ border }: TagProps) => border && `border: ${border}`};
+  ${({ bg }: TagProps) => bg && `background: ${bg}`};
+  ${({ bold }: TagProps) => bold && 'font-weight: 700 !important'};
+`;
 
 export const Global = createGlobalStyle`
   * {
@@ -28,8 +39,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Flex = styled.div`
-  margin-top: ${({ mt }: TagProps) => `${mt}px`};
+export const Flex = styled(BaseTag)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,4 +143,20 @@ export const H4 = styled.h4`
   font-family: Georgia, serif;
   font-weight: 400;
   text-align: center;
+`;
+
+export const Button = styled(Flex)`
+  font-size: 1.75rem;
+  font-family: 'Rozha One', serif;
+  height: 80px;
+  max-width: 300px;
+  color: #e9b370;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #e9b370;
+  cursor: pointer;
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &:hover {
+    background-color: #e9b370;
+    color: #fff;
+  }
 `;

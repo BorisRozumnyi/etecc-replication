@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Flex, H2, H1, H4 } from 'src/styles';
+import { Container, Flex, H2, H1, H4, Button, BaseTag } from 'src/styles';
 
 export const SecondScreen = () => (
   <Container mt={40}>
@@ -21,6 +21,12 @@ export const SecondScreen = () => (
     </Flex>
     <Flex mt={45}>
       <H4 bold>How can we help?</H4>
+    </Flex>
+    <Flex mt={10}>
+      <Button as="button" p="5px">
+        <i className="lnr lnr-arrow-right" />
+        &nbsp;Learn what we do
+      </Button>
     </Flex>
   </Container>
 );
