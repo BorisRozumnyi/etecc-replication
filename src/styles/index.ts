@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 type TagProps = {
   mt?: number;
+  bold?: boolean;
 };
 
 export const Global = createGlobalStyle`
@@ -17,7 +18,7 @@ export const Container = styled.section`
   margin: 0 auto;
   margin-top: ${({ mt }: TagProps) => `${mt}px`};
   @media (min-width: 768px) {
-    width: 750px;
+    width: 730px;
   }
   @media (min-width: 992px) {
     width: 970px;
@@ -36,6 +37,7 @@ export const Flex = styled.div`
 `;
 
 export const H1 = styled.h1`
+  margin-top: ${({ mt }: TagProps) => `${mt}px`};
   font-size: 2.75rem;
   @media (min-width: 768px) {
     font-size: 3.75rem;
@@ -120,4 +122,15 @@ export const H2 = styled.h2`
   &:after {
     margin-left: 10px;
   }
+`;
+
+export const H4 = styled.h4`
+  margin-top: ${({ mt }: TagProps) => `${mt}px`};
+  ${({ bold }: TagProps) => bold && 'font-weight: 700 !important'};
+  font-size: 1.4rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  text-align: center;
 `;
