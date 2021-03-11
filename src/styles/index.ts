@@ -1,5 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+type TagProps = {
+  mt?: number;
+};
+
 export const Global = createGlobalStyle`
   * {
     margin: 0;
@@ -11,6 +15,7 @@ export const Global = createGlobalStyle`
 
 export const Container = styled.section`
   margin: 0 auto;
+  margin-top: ${({ mt }: TagProps) => `${mt}px`};
   @media (min-width: 768px) {
     width: 750px;
   }
@@ -23,6 +28,7 @@ export const Container = styled.section`
 `;
 
 export const Flex = styled.div`
+  margin-top: ${({ mt }: TagProps) => `${mt}px`};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +44,7 @@ export const H1 = styled.h1`
   letter-spacing: 0;
   font-family: 'Rozha One', serif;
   text-align: center;
+  color: #444444;
 `;
 
 export const H1WithLines = styled(H1)`
@@ -88,12 +95,8 @@ export const H1WithLines = styled(H1)`
   }
 `;
 
-type H2Props = {
-  mt?: number;
-};
-
 export const H2 = styled.h2`
-  margin-top: ${({ mt }: H2Props) => `${mt}px` || '10px'};
+  margin-top: ${({ mt }: TagProps) => `${mt}px`};
   font-size: 1.5rem;
   line-height: 1.55;
   letter-spacing: 2px;
