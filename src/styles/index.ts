@@ -37,8 +37,11 @@ export const H1 = styled.h1`
   line-height: 2.95rem;
   letter-spacing: 0;
   font-family: 'Rozha One', serif;
-  color: #fff;
   text-align: center;
+`;
+
+export const H1WithLines = styled(H1)`
+  color: #fff;
   &:before,
   &:after {
     transform: rotateZ(-45deg);

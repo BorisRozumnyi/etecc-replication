@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Flex, H1 } from 'src/styles';
+import { Container, Flex, H1WithLines } from 'src/styles';
 import styled from 'styled-components';
 
 export const FirstScreen = () => (
@@ -9,7 +9,9 @@ export const FirstScreen = () => (
         <H3>etecc interactive</H3>
       </Flex>
       <Flex>
-        <H1>We build websites, software and mobile applications</H1>
+        <H1WithLines>
+          We build websites, software and mobile applications
+        </H1WithLines>
       </Flex>
     </Container>
   </Wrapper>
