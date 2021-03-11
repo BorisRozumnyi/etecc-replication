@@ -107,6 +107,16 @@ export const H1WithLines = styled(H1)`
   }
 `;
 
+type HProps = {
+  lineColor?: string;
+};
+
+/* border-bottom: 1px solid
+  ${({ lineColor }: HProps) => lineColor || '#e9e9e9'}; */
+
+/* ${({ lineColor }: HProps) =>
+  lineColor && `border-bottom: 1px solid ${lineColor}`}; */
+
 export const H2 = styled.h2`
   margin-top: ${({ mt }: TagProps) => `${mt}px`};
   font-size: 1.5rem;
@@ -131,6 +141,14 @@ export const H2 = styled.h2`
 
   &:after {
     margin-left: 10px;
+  }
+`;
+
+export const H2Yellow = styled(H2)`
+  color: #fff;
+  &:before,
+  &:after {
+    border-bottom: 1px solid #e9b370;
   }
 `;
 
