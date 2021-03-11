@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from 'src/styles';
+import { Container, Flex } from 'src/styles';
 import styled from 'styled-components';
 
 export const FirstScreen = () => (
@@ -20,18 +20,6 @@ const Wrapper = styled(Flex)`
   height: 35.625rem;
   position: relative;
   overflow: hidden;
-`;
-
-const Container = styled.section`
-  @media (min-width: 768px) {
-    width: 750px;
-  }
-  @media (min-width: 992px) {
-    width: 970px;
-  }
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
 `;
 
 const H1 = styled.h1`

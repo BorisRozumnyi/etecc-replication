@@ -9,6 +9,19 @@ export const Global = createGlobalStyle`
   }
 `;
 
+export const Container = styled.section`
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+`;
+
 export const Flex = styled.div`
   display: flex;
   justify-content: center;
@@ -16,7 +29,12 @@ export const Flex = styled.div`
   padding: 0 15px;
 `;
 
+type H2Props = {
+  mt?: number;
+};
+
 export const H2 = styled.h2`
+  margin-top: ${({ mt }: H2Props) => `${mt}px` || '10px'};
   font-size: 1.5rem;
   line-height: 1.55;
   letter-spacing: 2px;
