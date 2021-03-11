@@ -1,4 +1,5 @@
 import React from 'react';
+import { Flex } from 'src/styles';
 import styled from 'styled-components';
 
 export const FirstScreen = () => (
@@ -13,13 +14,6 @@ export const FirstScreen = () => (
     </Container>
   </Wrapper>
 );
-
-const Flex = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-`;
 
 const Wrapper = styled(Flex)`
   background-color: #181818;
