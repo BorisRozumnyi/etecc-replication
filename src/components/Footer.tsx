@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'src/styles';
+import { Button, Container, LinkElement } from 'src/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDribbble,
@@ -33,7 +33,14 @@ export const Footer = () => (
           <FontAwesomeIcon icon={faDribbble} />
         </li>
       </SocialList>
+      <Button>Start Your Project</Button>
     </Container>
+    <BottomBlock>
+      {/* <Container> */}
+      <div>eTecc© 2021 eTecc / Interactive</div>
+      <LinkElement href="/">Customer Login</LinkElement>
+      {/* </Container> */}
+    </BottomBlock>
   </Wrapper>
 );
 
@@ -74,10 +81,32 @@ const Span = styled.span`
   font-size: 0.9rem;
 `;
 
-export const SocialList = styled.ul`
-  background: #efd;
+const SocialList = styled.ul`
   & li {
-    border: 1px solid red;
     list-style: none;
+  }
+`;
+
+const BottomBlock = styled.section`
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  grid-template:
+    100px /
+    minmax(15px, 25px) 1fr 1fr minmax(15px, 25px);
+  @media (min-width: 768px) {
+    grid-template-columns:
+      minmax(15px, 1fr)
+      minmax(40%, 1fr)
+      minmax(40%, 1fr)
+      minmax(15px, 1fr);
+  }
+  align-items: center;
+  *:nth-child(1) {
+    grid-column: 2/3;
+  }
+  *:nth-child(2) {
+    grid-column: 3/4;
+    justify-self: end;
   }
 `;

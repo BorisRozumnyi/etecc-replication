@@ -180,3 +180,7 @@ export const Button = styled(Flex)`
     color: #fff;
   }
 `;
+
+export const LinkElement = styled.a`
+  color: inherit;
+`;

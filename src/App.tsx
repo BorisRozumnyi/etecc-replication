@@ -19,8 +19,8 @@ export const App = () => {
 };
 
 export const Main = styled.main`
-  background: #efd;
   z-index: 3;
   margin-bottom: 420px;
   position: relative;
+  background: #fff;
 `;
