@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 type TagProps = {
   mt?: number;
+  mb?: number;
   p?: string;
   border?: string;
   bold?: boolean;
@@ -10,6 +11,7 @@ type TagProps = {
 
 export const BaseTag = styled.div`
   ${({ mt }: TagProps) => mt && `margin-top: ${mt}px`};
+  ${({ mb }: TagProps) => mb && `margin-bottom: ${mb}px`};
   ${({ p }: TagProps) => p && `padding: ${p}`};
   ${({ border }: TagProps) => border && `border: ${border}`};
   ${({ bg }: TagProps) => bg && `background: ${bg}`};
