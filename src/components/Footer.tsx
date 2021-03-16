@@ -11,7 +11,7 @@ import styled from 'styled-components';
 
 export const Footer = () => (
   <Wrapper>
-    <Container mt={40}>
+    <ContainerComponent>
       <div>
         <H4>Main Office</H4>
         <P>50 South Main St. Ste 200</P>
@@ -33,13 +33,14 @@ export const Footer = () => (
           <FontAwesomeIcon icon={faDribbble} color="#e9b370" size="2x" />
         </li>
       </SocialList>
-      <Button>Start Your Project</Button>
-    </Container>
+      <Button as="button" p="5px">
+        <i className="lnr lnr-arrow-right" />
+        &nbsp;Learn what we do
+      </Button>
+    </ContainerComponent>
     <BottomBlock>
-      {/* <Container> */}
       <div>eTecc© 2021 eTecc / Interactive</div>
       <LinkElement href="/">Customer Login</LinkElement>
-      {/* </Container> */}
     </BottomBlock>
   </Wrapper>
 );
@@ -50,13 +51,17 @@ const Wrapper = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 440px;
-  transform: translate3d(0, 0, 0);
   background-color: #120e0f;
-  text-align: left;
   border-top: 1px solid #120e0f;
   z-index: 2;
+  display: grid;
+  grid-template: 1fr / 1fr;
+`;
+
+const ContainerComponent = styled.div`
   padding: 60px 0 80px;
+  display: grid;
+  justify-content: center;
 `;
 
 export const H4 = styled.h4`

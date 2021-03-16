@@ -20,7 +20,7 @@ export const App = () => {
 
 export const Main = styled.main`
   z-index: 3;
-  margin-bottom: 420px;
+  margin-bottom: 515px;
   position: relative;
   background: #fff;
 `;
