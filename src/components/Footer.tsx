@@ -21,16 +21,16 @@ export const Footer = () => (
       </div>
       <SocialList>
         <li>
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faTwitter} color="#e9b370" size="2x" />
         </li>
         <li>
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faInstagram} color="#e9b370" size="2x" />
         </li>
         <li>
-          <FontAwesomeIcon icon={faLinkedinIn} />
+          <FontAwesomeIcon icon={faLinkedinIn} color="#e9b370" size="2x" />
         </li>
         <li>
-          <FontAwesomeIcon icon={faDribbble} />
+          <FontAwesomeIcon icon={faDribbble} color="#e9b370" size="2x" />
         </li>
       </SocialList>
       <Button>Start Your Project</Button>
@@ -52,8 +52,7 @@ const Wrapper = styled.footer`
   right: 0;
   height: 440px;
   transform: translate3d(0, 0, 0);
-  background-color: #f5e2e5;
-  /* background-color: #120e0f; */
+  background-color: #120e0f;
   text-align: left;
   border-top: 1px solid #120e0f;
   z-index: 2;
@@ -82,6 +81,12 @@ const Span = styled.span`
 `;
 
 const SocialList = styled.ul`
+  grid-gap: 14px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 149px;
+  justify-content: center;
+  align-items: center;
   & li {
     list-style: none;
   }
